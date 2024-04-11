@@ -26,6 +26,8 @@ public class MyTelegramBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
 
 
+        System.out.println(" Klient chat id : "+update.getMessage().getChatId());
+
         if (update.hasMessage()) {
             Message message = update.getMessage();
             if (message.hasText() && message.getText().equals("/start")) {

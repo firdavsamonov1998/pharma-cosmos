@@ -59,7 +59,7 @@
 					<assembleDirectory>target</assembleDirectory>
 					<programs>
 						<program>
-							<mainClass>com.example.demo.PharmacosmosApplication</mainClass>
+							<mainClass>com.example.demo.PharmaCosmosApplication</mainClass>
 							<name>demo</name>
 						</program>
 					</programs>

@@ -4,12 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PharmacosmosApplication {
+public class PharmaCosmosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PharmacosmosApplication.class, args);
-	}
+		SpringApplication.run(PharmaCosmosApplication.class, args);
 
+	}
 
 
 }
