@@ -17,6 +17,7 @@ public class UserServiceRu {
                 chatId, messageId);
     }
 
+
     public static SendMessage getPhoneNumberRu(Long chatId, Integer messageId) {
         return SendMsg.sendMsgParseMode("Пожалуйста, введите свой номер телефона в порядке ниже!" +
                 "\n*Например : +998900279803*", chatId);

@@ -10,6 +10,4 @@ public class PharmaCosmosApplication {
     public static void main(String[] args) {
         SpringApplication.run(PharmaCosmosApplication.class, args);//
     }
-
-
 }
