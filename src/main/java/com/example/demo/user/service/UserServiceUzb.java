@@ -82,7 +82,7 @@ public class UserServiceUzb {
     }
 
     public static void sendSmsToAdmin(Profile profile) {
-        SmsUtil.sendSmsCode("+998900279803",
+        SmsUtil.sendSmsCode("+998977316336",
                 "\n\nIsm :" + profile.getFullName() +
                         "\n\nTelefon raqami : " + profile.getPhone() +
                         "\n\nMa'lumoti : " + profile.getData() +
