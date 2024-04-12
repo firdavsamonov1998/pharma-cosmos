@@ -97,7 +97,8 @@ public class MainController {
             myTelegramBot.sendEditeMessage(UserServiceUzb.sendFinishedMessageUz(message.getChatId(), message.getMessageId()));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6846515723L));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
-            UserServiceUzb.sendSmsToAdmin(profile);
+            myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6317237980L));
+           // UserServiceUzb.sendSmsToAdmin(profile);
 
 
             step.setStep(Step.NONE);
@@ -156,7 +157,8 @@ public class MainController {
             myTelegramBot.sendEditeMessage(UserServiceRu.sendFinishedMessageRu(message.getChatId(), message.getMessageId()));
             myTelegramBot.sendMessage(UserServiceRu.sendToAdminRu(profile, 6846515723L));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
-            UserServiceRu.sendSmsToAdminRu(profile);
+            myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6317237980L));
+          //  UserServiceRu.sendSmsToAdminRu(profile);
             step.setStep(Step.NONE);
 
         }
