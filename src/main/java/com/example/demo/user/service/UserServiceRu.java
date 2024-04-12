@@ -73,7 +73,7 @@ public class UserServiceRu {
     }
 
     public static void sendSmsToAdminRu(Profile profile) {
-        SmsUtil.sendSmsCode("+998900279803",
+        SmsUtil.sendSmsCode("+998977316336",
                 "\n\nИмя :" + profile.getFullName() +
                         "\n\nНомер телефона : " + profile.getPhone() +
                         "\n\nИнформация: " + profile.getData() +

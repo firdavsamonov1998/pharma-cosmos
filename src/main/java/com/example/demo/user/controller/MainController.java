@@ -97,7 +97,6 @@ public class MainController {
             myTelegramBot.sendEditeMessage(UserServiceUzb.sendFinishedMessageUz(message.getChatId(), message.getMessageId()));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6846515723L));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
-
             UserServiceUzb.sendSmsToAdmin(profile);
 
 
