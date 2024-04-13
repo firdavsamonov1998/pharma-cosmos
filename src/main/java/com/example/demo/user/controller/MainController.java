@@ -93,13 +93,12 @@ public class MainController {
             step.setStep(Step.CLAIM_UZ);
 
         } else if (step.getStep() == Step.CLAIM_UZ) {
-
-            myTelegramBot.sendEditeMessage(UserServiceUzb.sendFinishedMessageUz(message.getChatId(), message.getMessageId()));
-            myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6846515723L));
-            myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
-            myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6317237980L));
-           // UserServiceUzb.sendSmsToAdmin(profile);
-
+             myTelegramBot.sendEditeMessage(UserServiceUzb.sendFinishedMessageUz(message.getChatId(), message.getMessageId()));
+             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6846515723L));
+             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
+             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6317237980L));
+             UserServiceUzb.sendSmsToAdmin1(profile);
+             UserServiceUzb.sendSmsToAdmin2(profile);
 
             step.setStep(Step.NONE);
             return;
@@ -147,18 +146,17 @@ public class MainController {
             step.setStep(Step.GET_LAN_RU);
 
         } else if (step.getStep() == Step.GET_LAN_RU) {
-
             profile.setLanguage(lan);
             myTelegramBot.sendEditeMessage(UserServiceRu.claimMessageRU(profile, message.getChatId(), message.getMessageId()));
             step.setStep(Step.CLAIM_RU);
 
         } else if (step.getStep() == Step.CLAIM_RU) {
-
             myTelegramBot.sendEditeMessage(UserServiceRu.sendFinishedMessageRu(message.getChatId(), message.getMessageId()));
             myTelegramBot.sendMessage(UserServiceRu.sendToAdminRu(profile, 6846515723L));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6317237980L));
-            //UserServiceRu.sendSmsToAdminRu(profile);
+            UserServiceRu.sendSmsToAdminRu1(profile);
+            UserServiceRu.sendSmsToAdminRu2(profile);
             step.setStep(Step.NONE);
 
         }

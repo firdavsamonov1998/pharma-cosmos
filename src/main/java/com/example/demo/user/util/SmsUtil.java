@@ -17,7 +17,7 @@ public class SmsUtil {
             MediaType.parse("text/plain");
             RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
                     .addFormDataPart("mobile_phone", phone)
-                    .addFormDataPart("message", "<<VAKANSIYA>> " + message)
+                    .addFormDataPart("message", "<<Vakansiya>>" + message)
                     .addFormDataPart("from", "4546")
                     .addFormDataPart("callback_url", "https://0000.uz/test.php")
                     .build();
@@ -38,8 +38,8 @@ public class SmsUtil {
                 .build();
         MediaType.parse("text/plain");
         RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
-                .addFormDataPart("email", "sanjar.usmanov.2020@mail.ru")
-                .addFormDataPart("password", "FcHJexVZz7nS6JpsfNuNgRvohd5zlS5YgL8eojgZ")
+                .addFormDataPart("email", "ooo-fon@mail.ru")
+                .addFormDataPart("password", "IiQYmytWbuBZTa9AfyWj2JkYR0KMGDwVw4tzynVK")
                 .build();
         Request request = new Request.Builder()
                 .url("https://notify.eskiz.uz/api/auth/login")

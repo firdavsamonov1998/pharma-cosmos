@@ -85,8 +85,18 @@ public class UserServiceUzb {
         );
     }
 
-    public static void sendSmsToAdmin(Profile profile) {
+    public static void sendSmsToAdmin1(Profile profile) {
         SmsUtil.sendSmsCode("+998977316336",
+                "\n\nIsm :" + profile.getFullName() +
+                        "\n\nTelefon raqami : " + profile.getPhone() +
+                        "\n\nMa'lumoti : " + profile.getData() +
+                        "\n\nvakansiya : " + profile.getProfession() +
+                        "\n\nTarjriba yili : " + profile.getExp() +
+                        "\n\nRus tili : " + profile.getLanguage());
+    }
+
+    public static void sendSmsToAdmin2(Profile profile) {
+        SmsUtil.sendSmsCode("++998505053331",
                 "\n\nIsm :" + profile.getFullName() +
                         "\n\nTelefon raqami : " + profile.getPhone() +
                         "\n\nMa'lumoti : " + profile.getData() +
@@ -97,7 +107,8 @@ public class UserServiceUzb {
 
     public static EditMessageText sendFinishedMessageUz(Long chatId, Integer messageId) {
         return SendMsg.sendMsgEditeParseMode("*Bizni tanlaganingizdan minnatdormiz ! \n" +
-                "Tez orada siz bilan bog'lanamiz. Siz bilan Pharma Cosmos HR roboti bo'ldi* \uD83E\uDD16 !", chatId, messageId);
+                "Sizning nomzodingiz ko'rib chiqish jarayonida . Agar bizga ma'qul kelsangiz tez orada " +
+                " siz bilan aloqaga chiqamiz. Siz bilan Pharma Cosmos HR Roboti bo'ldi* \uD83E\uDD16 !", chatId, messageId);
     }
 
 

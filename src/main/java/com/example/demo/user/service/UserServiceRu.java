@@ -58,7 +58,8 @@ public class UserServiceRu {
 
     public static EditMessageText sendFinishedMessageRu(Long chatId, Integer messageId) {
         return SendMsg.sendMsgEditeParseMode("*Спасибо, что выбрали нас!* \n" +
-                "*Мы свяжемся с вами в ближайшее время. Робот Pharma Cosmos HR с вами *\uD83E\uDD16 !", chatId, messageId);
+                "* Ваша заявка находится на рассмотрении. Если вы согласны с нами, мы свяжемся с вами в ближайшее время.*" +
+                " *Робот Pharma Cosmos HR с вами *\uD83E\uDD16 !", chatId, messageId);
     }
 
     public static EditMessageText claimMessageRU(Profile profile, Long chatId, Integer messageId) {
@@ -68,15 +69,23 @@ public class UserServiceRu {
                         "\n\n*Информация:* " + profile.getData() + "" +
                         "\n\n*Вакаксия : *" + profile.getProfession() +
                         "\n\n*Опыт : *" + profile.getExp() +
-                        "\n\n*Русский язык : *" + profile.getLanguage(),
-
-                chatId, messageId,
+                        "\n\n*Русский язык : *" + profile.getLanguage(), chatId, messageId,
                 InlineButton.keyboardMarkup(InlineButton.rowList(
                         InlineButton.row(InlineButton.button("Подтверждение", "claim_ru")))));
     }
 
-    public static void sendSmsToAdminRu(Profile profile) {
+    public static void sendSmsToAdminRu1(Profile profile) {
         SmsUtil.sendSmsCode("+998977316336",
+                "\n\nИмя :" + profile.getFullName() +
+                        "\n\nНомер телефона : " + profile.getPhone() +
+                        "\n\nИнформация: " + profile.getData() +
+                        "\n\nвакаксия : " + profile.getProfession() +
+                        "\n\nопыт : " + profile.getExp() +
+                        "\n\nрусский язык : " + profile.getLanguage());
+    }
+
+    public static void sendSmsToAdminRu2(Profile profile) {
+        SmsUtil.sendSmsCode("++998505053331",
                 "\n\nИмя :" + profile.getFullName() +
                         "\n\nНомер телефона : " + profile.getPhone() +
                         "\n\nИнформация: " + profile.getData() +
