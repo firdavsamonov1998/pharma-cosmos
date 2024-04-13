@@ -79,7 +79,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "https://t.me/pharmacosmos_hr_bot";
+        return "@pharmacosmos_hr_bot";
     }
 
 

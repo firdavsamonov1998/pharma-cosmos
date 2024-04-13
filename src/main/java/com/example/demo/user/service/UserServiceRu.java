@@ -46,9 +46,12 @@ public class UserServiceRu {
     public static EditMessageText getProfessionRu(Long chatId, Integer messageId) {
         return SendMsg.sendMsgEditeButton("*Пожалуйста, выберите вакансию* \uD83D\uDC47", chatId, messageId,
                 InlineButton.keyboardMarkup(InlineButton.rowList(
-                        InlineButton.row(InlineButton.button("заведующий", ButtonName.menejer_ru)),
+                        InlineButton.row(InlineButton.button("Заведующий аптекой", ButtonName.menejer_ru)),
                         InlineButton.row(InlineButton.button("Фармацевт", ButtonName.pharma_ru)),
-                        InlineButton.row(InlineButton.button("стажер-практикант", ButtonName.practician_ru))
+                        InlineButton.row(InlineButton.button("Стажер-практикант", ButtonName.practician_ru)),
+                        InlineButton.row(InlineButton.button("Доставчик", ButtonName.dostavchik_ru)),
+                        InlineButton.row(InlineButton.button("Работа склад", ButtonName.sklad_ru)),
+                        InlineButton.row(InlineButton.button("Отдел продажа парафарма", ButtonName.prodaja_ru))
                 )));
 
     }
@@ -63,9 +66,9 @@ public class UserServiceRu {
                         "\n\n\n*Имя и фамилия :* " + profile.getFullName() + "" +
                         "\n\n*Номер телефона :* " + profile.getPhone() + "" +
                         "\n\n*Информация:* " + profile.getData() + "" +
-                        "\n\n*профессия : *" + profile.getProfession() +
-                        "\n\n*опыт : *" + profile.getExp() +
-                        "\n\n*русский язык : *" + profile.getLanguage(),
+                        "\n\n*Вакаксия : *" + profile.getProfession() +
+                        "\n\n*Опыт : *" + profile.getExp() +
+                        "\n\n*Русский язык : *" + profile.getLanguage(),
 
                 chatId, messageId,
                 InlineButton.keyboardMarkup(InlineButton.rowList(
@@ -77,7 +80,7 @@ public class UserServiceRu {
                 "\n\nИмя :" + profile.getFullName() +
                         "\n\nНомер телефона : " + profile.getPhone() +
                         "\n\nИнформация: " + profile.getData() +
-                        "\n\nпрофессия : " + profile.getProfession() +
+                        "\n\nвакаксия : " + profile.getProfession() +
                         "\n\nопыт : " + profile.getExp() +
                         "\n\nрусский язык : " + profile.getLanguage());
     }
@@ -88,9 +91,9 @@ public class UserServiceRu {
                         "\n\n*Имя :* " + profile.getFullName() +
                         "\n\n*Номер телефона :* " + profile.getPhone() +
                         "\n\n*Информация : *" + profile.getData() +
-                        "\n\n*профессия :* " + profile.getProfession() +
-                        "\n\n*опыт :* " + profile.getExp()
-                        + "\n\n*русский язык : *" + profile.getLanguage(), chatId
+                        "\n\n*Вакаксия :* " + profile.getProfession() +
+                        "\n\n*Опыт :* " + profile.getExp()
+                        + "\n\n*Русский язык : *" + profile.getLanguage(), chatId
         );
     }
 

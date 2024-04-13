@@ -33,11 +33,14 @@ public class UserServiceUzb {
 
     public static EditMessageText getProfessionUz(Long chatId, Integer messageId) {
 
-        return SendMsg.sendMsgEditeButton("*Iltimos kasbingizni tanlang* \uD83D\uDC47 ",
+        return SendMsg.sendMsgEditeButton("*Iltimos vakansiya turini tanlang* \uD83D\uDC47 ",
                 chatId, messageId, InlineButton.keyboardMarkup(InlineButton.rowList(
                         InlineButton.row(InlineButton.button("Dorixona mudiri", ButtonName.menejer_uz)),
                         InlineButton.row(InlineButton.button("Farmatsevt", ButtonName.pharma_uz)),
-                        InlineButton.row(InlineButton.button("Amaliyotchi", ButtonName.practician_uz))
+                        InlineButton.row(InlineButton.button("Praktikant", ButtonName.practician_uz)),
+                        InlineButton.row(InlineButton.button("Dostavchik", ButtonName.dostavchik_uz)),
+                        InlineButton.row(InlineButton.button("Sklad ishchisi", ButtonName.sklad_uz)),
+                        InlineButton.row(InlineButton.button("Otdel pradaja parafarma", ButtonName.prodaja_uz))
                 )));
 
     }
@@ -60,7 +63,7 @@ public class UserServiceUzb {
                         "\n\n\n*Ismi :* " + profile.getFullName() + "" +
                         "\n\n*Telefon raqami :* " + profile.getPhone() + "" +
                         "\n\n*Ma'lumoti :* " + profile.getData() + "" +
-                        "\n\n*Kasbi : *" + profile.getProfession() +
+                        "\n\n*vakansiya : *" + profile.getProfession() +
                         "\n\n*Tajribasi : *" + profile.getExp() +
                         "\n\n*Rus tili  : *" + profile.getLanguage(), chatId, messageId,
                 InlineButton.keyboardMarkup(InlineButton.rowList(
@@ -75,7 +78,7 @@ public class UserServiceUzb {
                         "\n\n*Ism :* " + profile.getFullName() +
                         "\n\n*Telefon raqami :* " + profile.getPhone() +
                         "\n\n*Ma'lumoti : *" + profile.getData() +
-                        "\n\n*Lavozim :* " + profile.getProfession() +
+                        "\n\n*vakansiya :* " + profile.getProfession() +
                         "\n\n*Tarjriba yili :* " + profile.getExp()
                         + "\n\n*Rus tili : *" + profile.getLanguage(), chatId
         );
@@ -86,7 +89,7 @@ public class UserServiceUzb {
                 "\n\nIsm :" + profile.getFullName() +
                         "\n\nTelefon raqami : " + profile.getPhone() +
                         "\n\nMa'lumoti : " + profile.getData() +
-                        "\n\nLavozim : " + profile.getProfession() +
+                        "\n\nvakansiya : " + profile.getProfession() +
                         "\n\nTarjriba yili : " + profile.getExp() +
                         "\n\nRus tili : " + profile.getLanguage());
     }

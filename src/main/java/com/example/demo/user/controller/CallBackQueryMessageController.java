@@ -46,8 +46,13 @@ public class CallBackQueryMessageController {
             case ButtonName.good_ru -> controller.handle(message, ButtonName.good_ru);
             case ButtonName.dont_uz -> controller.handle(message, ButtonName.dont_uz);
             case ButtonName.dont_ru -> controller.handle(message, ButtonName.dont_ru);
+            case ButtonName.dostavchik_uz -> controller.handle(message, ButtonName.dostavchik_uz);
+            case ButtonName.dostavchik_ru -> controller.handle(message, ButtonName.dostavchik_ru);
+            case ButtonName.prodaja_uz -> controller.handle(message,ButtonName.prodaja_uz);
+            case ButtonName.prodaja_ru -> controller.handle(message,ButtonName.prodaja_ru);
+            case ButtonName.sklad_uz -> controller.handle(message,ButtonName.sklad_uz);
+            case ButtonName.sklad_ru -> controller.handle(message,ButtonName.sklad_ru);
             case "claim_uz", "claim_ru" -> controller.handle(message, "");
-
 
         }
     }

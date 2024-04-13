@@ -29,4 +29,11 @@ public interface ButtonName {
     String three_year_ru = "3 - 5 год";
     String five_year_uz = "5 yil va undan yuqori";
     String five_year_ru = "5 лет и выше";
+    String dostavchik_ru = "доставчик";
+    String sklad_ru = "работа склад";
+    String prodaja_ru = "Отдел продажа парафарма";
+    String dostavchik_uz = "Dostavchik";
+    String sklad_uz ="Sklad ishchisi";
+    String prodaja_uz = "Otdel pradaja parafarma";
 }
+
