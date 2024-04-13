@@ -3,6 +3,7 @@ package com.example.demo.user.service;
 
 import com.example.demo.user.button.InlineButton;
 import com.example.demo.user.message.SendMsg;
+import org.telegram.telegrambots.meta.api.methods.send.SendLocation;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 
 
@@ -19,15 +20,15 @@ public class TelegramMessageService {
 
 
     public static SendMessage sendInfo(Long chatId) {
-        return SendMsg.sendMsg("Почему мы?\n" +
-                        "\n" +
-                        "\uD83D\uDC69\u200D\uD83D\uDD2C Соучредителями компании являются врачи-клиницисты с" +
-                        " большим стажем работы с пациентами и команда зарубежных технологов.\n\n\n" +
-                        "\uD83E\uDDD1\uD83C\uDFFB\u200D\uD83D\uDD2C Миссия компании: Изменение отношения населения к " +
-                        "местному производителю путём предоставления качественных препаратов при лечении различных заболеваний.\n\n\n" +
-                        "\uD83C\uDFE5 Цель компании: предоставить населению инновационные препараты с высоким качеством.\n\n\n" +
-                        "\uD83D\uDCCDНаш адресс  :  Ташкент, улица Фозилтепа, 261\n\n\n" +
+        return SendMsg.sendMsg("Наша компания динамично развивающаяся компания и мы всегда рады, " +
+                        "что вы выбираете нашу компанию \uD83D\uDE0A\uD83D\uDE0A" +
+                        "\n\uD83D\uDCCDНаш адресс  :  Ташкент, улица Фозилтепа, 261\n" +
                         "☎\uFE0FКонтакт : +998977316336"
                 , chatId);
+    }
+
+
+    public static SendLocation sendLocation(Long chatId) {
+        return SendMsg.sendLocation(chatId);
     }
 }

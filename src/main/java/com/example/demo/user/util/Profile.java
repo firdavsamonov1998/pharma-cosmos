@@ -6,6 +6,15 @@ public class Profile {
     private String data;
     private String profession;
     private String exp;
+    private String userName;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public String getLanguage() {
         return language;

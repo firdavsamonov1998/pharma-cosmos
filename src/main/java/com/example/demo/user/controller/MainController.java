@@ -158,7 +158,7 @@ public class MainController {
             myTelegramBot.sendMessage(UserServiceRu.sendToAdminRu(profile, 6846515723L));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6317237980L));
-          //  UserServiceRu.sendSmsToAdminRu(profile);
+            //UserServiceRu.sendSmsToAdminRu(profile);
             step.setStep(Step.NONE);
 
         }

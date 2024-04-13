@@ -80,7 +80,8 @@ public class UserServiceUzb {
                         "\n\n*Ma'lumoti : *" + profile.getData() +
                         "\n\n*vakansiya :* " + profile.getProfession() +
                         "\n\n*Tarjriba yili :* " + profile.getExp()
-                        + "\n\n*Rus tili : *" + profile.getLanguage(), chatId
+                        + "\n\n*Rus tili : *" + profile.getLanguage()
+                  , chatId
         );
     }
 

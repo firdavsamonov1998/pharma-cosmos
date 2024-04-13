@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.api.methods.send.SendLocation;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -34,14 +35,15 @@ public class MyTelegramBot extends TelegramLongPollingBot {
                 controller.handle(message, "");
                 return;
             }
-            if (message.hasText() && message.getText().equals("/info")) {
+            if (message.hasText() && message.getText().equals("/location")) {
                 myTelegramBot.sendMessage(TelegramMessageService.sendInfo(message.getChatId()));
+                myTelegramBot.sendLocation(TelegramMessageService.sendLocation(message.getChatId()));
                 return;
             }
             controller.handle(message, "");
         } else if (update.hasCallbackQuery()) {
             queryMessageController.callBackMessage(update.getCallbackQuery());
-        } else {
+        }  else {
             sendMessage(ErrorMessage.sendErrorMessage(update.getMessage().getChatId()));
         }
     }
@@ -66,11 +68,20 @@ public class MyTelegramBot extends TelegramLongPollingBot {
     }
 
 
+    public Message sendLocation(SendLocation message) {
+        try {
+            return execute(message);
+        } catch (TelegramApiException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
    @Lazy
     public MyTelegramBot(TelegramBotsApi telegramBotsApi, MyTelegramBot myTelegramBot,
                          CallBackQueryMessageController queryMessageController,
                          MainController controller) throws TelegramApiException {
-        super("6915584304:AAF8jqqtYdA9Q3kkkHke4L-oemR5g2Qhl_8");
+        super("5693194268:AAGJcEKnyu07w482vghy37g4AwbKLnLBFcM");
         this.myTelegramBot = myTelegramBot;
         this.queryMessageController = queryMessageController;
         this.controller = controller;
@@ -79,7 +90,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "@pharmacosmos_hr_bot";
+        return "@pharmilibrarybot";
     }
 
 
