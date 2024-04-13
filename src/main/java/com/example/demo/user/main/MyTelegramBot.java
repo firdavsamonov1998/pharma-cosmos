@@ -81,7 +81,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
     public MyTelegramBot(TelegramBotsApi telegramBotsApi, MyTelegramBot myTelegramBot,
                          CallBackQueryMessageController queryMessageController,
                          MainController controller) throws TelegramApiException {
-        super("5693194268:AAGJcEKnyu07w482vghy37g4AwbKLnLBFcM");
+        super("6915584304:AAF8jqqtYdA9Q3kkkHke4L-oemR5g2Qhl_8");
         this.myTelegramBot = myTelegramBot;
         this.queryMessageController = queryMessageController;
         this.controller = controller;
@@ -90,7 +90,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "@pharmilibrarybot";
+        return "@pharmacosmos_hr_bot";
     }
 
 
