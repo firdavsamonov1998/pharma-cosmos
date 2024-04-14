@@ -59,7 +59,7 @@ public class UserServiceUzb {
 
     public static EditMessageText claimMessageUz(Profile profile, Long chatId, Integer messageId) {
 
-        return SendMsg.sendMsgEditeButton("\t\t\t\t*Iltimos Amaliyotni tasdiqlang *\uD83D\uDC47 " +
+        return SendMsg.sendMsgEditeButton("\t\t\t\t*ILTIMOS AMALIYOTNI TASDIQLANG *\uD83D\uDC47 " +
                         "\n\n\n*Ismi :* " + profile.getFullName() + "" +
                         "\n\n*Telefon raqami :* " + profile.getPhone() + "" +
                         "\n\n*Ma'lumoti :* " + profile.getData() + "" +
