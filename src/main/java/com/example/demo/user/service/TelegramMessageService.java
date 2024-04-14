@@ -33,8 +33,10 @@ public class TelegramMessageService {
     }
 
     public static SendMessage sendCreatedInfo(Long chatId) {
-        return SendMsg.sendMsgParseMode("*This bot created  by   \uD83D\uDC68\u200D\uD83D\uDCBB  FIRDAVS AMONOV  especially  for OOO PHARMA COSMOS *" +
-                "*\n \uD83D\uDCF1 Phone : * +998900279803" +
-                "*\n  \uD83C\uDF10Telegram :* @firdavs_amonovv", chatId);
+        return SendMsg.sendMsgParseMode("This bot created  by * Firdavs Amonov Rustamjon o'g'li*  especially  for * OOO PHARMA COSMOS *. " +
+                " This Company is a rapidly developing pharmaceutical organization. Currently, there are more than 100 pharmacies belonging to the enterprise ." +
+                "If your company needs such a telegram bot, please contact us" +
+                "*\n\n\uD83D\uDCF1 Phone : +998900279803*" +
+                "*\n\n\uD83C\uDF10Telegram : @firdavs_amonovv *", chatId);
     }
 }
