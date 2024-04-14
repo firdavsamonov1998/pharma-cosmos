@@ -1,5 +1,6 @@
 package com.example.demo.user.controller;
 
+import com.example.demo.user.service.TelegramMessageService;
 import com.example.demo.user.util.ButtonName;
 import org.springframework.stereotype.Controller;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
@@ -52,7 +53,9 @@ public class CallBackQueryMessageController {
             case ButtonName.prodaja_ru -> controller.handle(message,ButtonName.prodaja_ru);
             case ButtonName.sklad_uz -> controller.handle(message,ButtonName.sklad_uz);
             case ButtonName.sklad_ru -> controller.handle(message,ButtonName.sklad_ru);
-            case "claim_uz", "claim_ru" -> controller.handle(message, "");
+            case ButtonName.claim_uz ,  ButtonName.claim_ru -> controller.handle(message, "");
+            case ButtonName.cancel_uz -> controller.handle(message,"cancel_uz");
+            case ButtonName.cancel_ru -> controller.handle(message,"cancel_ru");
 
         }
     }

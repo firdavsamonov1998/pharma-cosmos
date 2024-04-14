@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 
 public class UserServiceUzb {
-    
+
     public static EditMessageText getUserNameUz(Long chatId, Integer messageId) {
         return SendMsg.sendMsgEditeParseMode("Iltimos ism va familiyangizni kiriting : \n" +
                 "*Masalan : Amonov Firdavs*", chatId, messageId);
@@ -67,7 +67,8 @@ public class UserServiceUzb {
                         "\n\n*Tajribasi : *" + profile.getExp() +
                         "\n\n*Rus tili  : *" + profile.getLanguage(), chatId, messageId,
                 InlineButton.keyboardMarkup(InlineButton.rowList(
-                        InlineButton.row(InlineButton.button("Tasdiqlash", "claim_uz"))
+                        InlineButton.row(InlineButton.button("Tasdiqlash ✅", ButtonName.claim_uz)),
+                        InlineButton.row(InlineButton.button("Bekor qilish ❌", ButtonName.cancel_uz))
                 )));
 
     }
@@ -81,7 +82,7 @@ public class UserServiceUzb {
                         "\n\n*vakansiya :* " + profile.getProfession() +
                         "\n\n*Tarjriba yili :* " + profile.getExp()
                         + "\n\n*Rus tili : *" + profile.getLanguage()
-                  , chatId
+                , chatId
         );
     }
 
@@ -108,7 +109,7 @@ public class UserServiceUzb {
     public static EditMessageText sendFinishedMessageUz(Long chatId, Integer messageId) {
         return SendMsg.sendMsgEditeParseMode("*Bizni tanlaganingizdan minnatdormiz ! \n" +
                 "Sizning nomzodingiz ko'rib chiqish jarayonida . Agar bizga ma'qul kelsangiz tez orada " +
-                " siz bilan aloqaga chiqamiz. Siz bilan Pharma Cosmos HR Roboti bo'ldi* \uD83E\uDD16 !", chatId, messageId);
+                " siz bilan aloqaga chiqamiz. Botni qayta ishga tushirish uchun /start tugmasini bosing* \uD83E\uDD16 !", chatId, messageId);
     }
 
 
@@ -120,5 +121,10 @@ public class UserServiceUzb {
                         InlineButton.row(InlineButton.button("Bilmayman", ButtonName.dont_uz))
 
                 )));
+    }
+
+    public static EditMessageText sendCancelInfoUz(Long chatId, Integer messageId) {
+        return SendMsg.sendMsgEditeParseMode("*Sizning amaliyotingiz muvaffaqqiyatli bekor qilindi.* " +
+                "*Botni qayta ishga tushirish uchun /start tugmasini bosing*" , chatId,messageId);
     }
 }

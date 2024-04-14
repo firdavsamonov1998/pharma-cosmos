@@ -59,7 +59,7 @@ public class UserServiceRu {
     public static EditMessageText sendFinishedMessageRu(Long chatId, Integer messageId) {
         return SendMsg.sendMsgEditeParseMode("*Спасибо, что выбрали нас!* \n" +
                 "* Ваша заявка находится на рассмотрении. Если вы согласны с нами, мы свяжемся с вами в ближайшее время.*" +
-                " *Робот Pharma Cosmos HR с вами *\uD83E\uDD16 !", chatId, messageId);
+                " *Нажмите /start, чтобы перезапустить бота.*", chatId, messageId);
     }
 
     public static EditMessageText claimMessageRU(Profile profile, Long chatId, Integer messageId) {
@@ -71,7 +71,9 @@ public class UserServiceRu {
                         "\n\n*Опыт : *" + profile.getExp() +
                         "\n\n*Русский язык : *" + profile.getLanguage(), chatId, messageId,
                 InlineButton.keyboardMarkup(InlineButton.rowList(
-                        InlineButton.row(InlineButton.button("Подтверждение", "claim_ru")))));
+                        InlineButton.row(InlineButton.button("Подтверждение ✅", ButtonName.claim_ru)),
+                        InlineButton.row(InlineButton.button("Oтмена ❌", ButtonName.cancel_ru))
+                )));
     }
 
     public static void sendSmsToAdminRu1(Profile profile) {
@@ -114,5 +116,10 @@ public class UserServiceRu {
                         InlineButton.row(InlineButton.button("Я не знаю", ButtonName.dont_ru))
 
                 )));
+    }
+
+    public static EditMessageText sendCancelInfoRu(Long chatId, Integer messageId) {
+        return SendMsg.sendMsgEditeParseMode("*Ваша транзакция успешно отменена.*" +
+                "*Нажмите /start, чтобы перезапустить бота.*.", chatId,messageId);
     }
 }

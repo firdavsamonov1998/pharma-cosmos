@@ -35,5 +35,9 @@ public interface ButtonName {
     String dostavchik_uz = "Dostavchik";
     String sklad_uz ="Sklad ishchisi";
     String prodaja_uz = "Otdel pradaja parafarma";
+    String claim_uz = "Tasdiqlash ✅";
+    String cancel_uz = "Bekor qilish ❌";
+    String claim_ru = "Подтверждение ✅";
+    String cancel_ru = "Oтмена ❌";
 }
 

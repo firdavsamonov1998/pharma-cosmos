@@ -73,9 +73,9 @@ public class MyTelegramBot extends TelegramLongPollingBot {
     }
 
 
-    public Message sendLocation(SendLocation message) {
+    public void sendLocation(SendLocation message) {
         try {
-            return execute(message);
+            execute(message);
         } catch (TelegramApiException e) {
             throw new RuntimeException(e);
         }
