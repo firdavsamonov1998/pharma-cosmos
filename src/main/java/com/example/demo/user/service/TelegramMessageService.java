@@ -22,8 +22,8 @@ public class TelegramMessageService {
     public static SendMessage sendInfo(Long chatId) {
         return SendMsg.sendMsg("Наша компания динамично развивающаяся компания и мы всегда рады, " +
                         "что вы выбираете нашу компанию \uD83D\uDE0A\uD83D\uDE0A" +
-                        "\n\uD83D\uDCCDНаш адресс  :  Ташкент, улица Фозилтепа, 261\n" +
-                        "☎\uFE0FКонтакт : +998977316336"
+                        "\n\uD83D\uDCCD*Наш адресс  :*  Ташкент, улица Фозилтепа, 261\n" +
+                        "☎\uFE0F*Контакт *: +998977316336"
                 , chatId);
     }
 
@@ -34,7 +34,7 @@ public class TelegramMessageService {
 
     public static SendMessage sendCreatedInfo(Long chatId) {
         return SendMsg.sendMsgParseMode("This bot created  by * Firdavs Amonov Rustamjon o'g'li*  especially  for * OOO PHARMA COSMOS *. " +
-                " This Company is a rapidly developing pharmaceutical organization. Currently, there are more than *100 pharmacies* belong to the enterprise ." +
+                " This Company is a rapidly developing pharmaceutical organization. Currently, there are more than 100 pharmacies belong to the enterprise ." +
                 "If your company needs such a telegram bot , please contact us" +
                 "*\n\n\uD83D\uDCF1 Phone : +998900279803*" +
                 "*\n\n\uD83C\uDF10Telegram : @firdavs_amonovv *", chatId);
