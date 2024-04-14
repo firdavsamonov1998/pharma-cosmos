@@ -34,7 +34,7 @@ public class TelegramMessageService {
 
     public static SendMessage sendCreatedInfo(Long chatId) {
         return SendMsg.sendMsgParseMode("*This bot created  by   \uD83D\uDC68\u200D\uD83D\uDCBB  FIRDAVS AMONOV  especially  for OOO PHARMA COSMOS *" +
-                "*\n \uD83D\uDCF1 Contact phone number : +998900279803*" +
+                "*\n \uD83D\uDCF1 Phone : +998900279803*" +
                 "\n  \uD83C\uDF10Telegram : @firdavs_amonovv", chatId);
     }
 }
