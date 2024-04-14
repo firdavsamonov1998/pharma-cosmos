@@ -110,8 +110,8 @@ public class MainController {
                myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6846515723L));
                myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
                myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6317237980L));
-               UserServiceUzb.sendSmsToAdmin1(profile);
-               UserServiceUzb.sendSmsToAdmin2(profile);
+               //UserServiceUzb.sendSmsToAdmin1(profile);
+              // UserServiceUzb.sendSmsToAdmin2(profile);
             step.setStep(Step.NONE);
             return;
 
@@ -138,6 +138,7 @@ public class MainController {
                 myTelegramBot.sendMessage(UserServiceRu.getDataRu(message.getChatId()));
                 step.setStep(Step.GET_DATA_RU);
             }
+
 
         } else if (step.getStep() == Step.GET_DATA_RU) {
 
@@ -167,8 +168,8 @@ public class MainController {
             myTelegramBot.sendMessage(UserServiceRu.sendToAdminRu(profile, 6846515723L));
              myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
              myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6317237980L));
-             UserServiceRu.sendSmsToAdminRu1(profile);
-             UserServiceRu.sendSmsToAdminRu2(profile);
+             //UserServiceRu.sendSmsToAdminRu1(profile);
+            // UserServiceRu.sendSmsToAdminRu2(profile);
             step.setStep(Step.NONE);
 
         }
