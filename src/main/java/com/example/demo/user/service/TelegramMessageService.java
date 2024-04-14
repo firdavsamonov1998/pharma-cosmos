@@ -20,7 +20,7 @@ public class TelegramMessageService {
 
 
     public static SendMessage sendInfo(Long chatId) {
-        return SendMsg.sendMsg("Наша компания динамично развивающаяся компания и мы всегда рады, " +
+        return SendMsg.sendMsgParseMode("Наша компания динамично развивающаяся компания и мы всегда рады, " +
                         "что вы выбираете нашу компанию \uD83D\uDE0A\uD83D\uDE0A" +
                         "\n\uD83D\uDCCD*Наш адресс  :*  Ташкент, улица Фозилтепа, 261\n" +
                         "☎\uFE0F*Контакт *: +998977316336"
