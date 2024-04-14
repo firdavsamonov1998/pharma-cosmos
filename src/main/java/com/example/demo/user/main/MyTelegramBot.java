@@ -40,10 +40,15 @@ public class MyTelegramBot extends TelegramLongPollingBot {
                 myTelegramBot.sendLocation(TelegramMessageService.sendLocation(message.getChatId()));
                 return;
             }
+
+            if (message.hasText() && message.getText().equals("/created")) {
+                myTelegramBot.sendMessage(TelegramMessageService.sendCreatedInfo(message.getChatId()));
+                return;
+            }
             controller.handle(message, "");
         } else if (update.hasCallbackQuery()) {
             queryMessageController.callBackMessage(update.getCallbackQuery());
-        }  else {
+        } else {
             sendMessage(ErrorMessage.sendErrorMessage(update.getMessage().getChatId()));
         }
     }
@@ -77,7 +82,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
     }
 
 
-   @Lazy
+    @Lazy
     public MyTelegramBot(TelegramBotsApi telegramBotsApi, MyTelegramBot myTelegramBot,
                          CallBackQueryMessageController queryMessageController,
                          MainController controller) throws TelegramApiException {
