@@ -30,7 +30,6 @@ public class SmsUtil {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public static String getToken() {
