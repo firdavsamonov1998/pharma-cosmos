@@ -24,7 +24,7 @@ public class MainController {
 
     public MainController(MyTelegramBot myTelegramBot) {
         this.myTelegramBot = myTelegramBot;
-    }
+    }//
 
 
     public void handle(Message message, String lan) {
