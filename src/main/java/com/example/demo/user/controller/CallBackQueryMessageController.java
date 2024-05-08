@@ -1,6 +1,5 @@
 package com.example.demo.user.controller;
 
-import com.example.demo.user.service.TelegramMessageService;
 import com.example.demo.user.util.ButtonName;
 import org.springframework.stereotype.Controller;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;

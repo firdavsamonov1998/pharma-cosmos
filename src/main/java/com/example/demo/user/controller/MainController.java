@@ -36,19 +36,20 @@ public class MainController {
             return;
         }
 
-        if (lan.equals("cancel_uz")){
-            myTelegramBot.sendEditeMessage(UserServiceUzb.sendCancelInfoUz(message.getChatId(),message.getMessageId()));
-            step.setStep(Step.NONE);
-            return;
+        switch (lan) {
+            case "cancel_uz" -> {
+                myTelegramBot.sendEditeMessage(UserServiceUzb.sendCancelInfoUz(message.getChatId(), message.getMessageId()));
+                step.setStep(Step.NONE);
+                return;
+            }
+            case "cancel_ru" -> {
+                myTelegramBot.sendEditeMessage(UserServiceRu.sendCancelInfoRu(message.getChatId(), message.getMessageId()));
+                step.setStep(Step.NONE);
+                return;
+            }
+            case "uz" -> step.setStep(Step.MAIN_UZ);
         }
 
-        if (lan.equals("cancel_ru")){
-            myTelegramBot.sendEditeMessage(UserServiceRu.sendCancelInfoRu(message.getChatId(),message.getMessageId()));
-            step.setStep(Step.NONE);
-            return;
-        }
-
-        if (lan.equals("uz")) step.setStep(Step.MAIN_UZ);
         if (lan.equals("ru")) step.setStep(Step.MAIN_RU);
 
 
@@ -110,6 +111,7 @@ public class MainController {
                myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6846515723L));
                myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
                myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 7138810801L));
+               myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6823044286L));
                //UserServiceUzb.sendSmsToAdmin1(profile);
               // UserServiceUzb.sendSmsToAdmin2(profile);
             step.setStep(Step.NONE);
@@ -168,6 +170,7 @@ public class MainController {
             myTelegramBot.sendMessage(UserServiceRu.sendToAdminRu(profile, 6846515723L));
              myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 38238435L));
             myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 7138810801L));
+            myTelegramBot.sendMessage(UserServiceUzb.sendToAdmin(profile, 6823044286L));
              //UserServiceRu.sendSmsToAdminRu1(profile);
             // UserServiceRu.sendSmsToAdminRu2(profile);
             step.setStep(Step.NONE);
